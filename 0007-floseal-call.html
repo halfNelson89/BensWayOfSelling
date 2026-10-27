@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The FLOSEAL Call</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400&family=Gelasio:wght@400;500&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="../assets/course.css">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+</head>
+<body>
+<div class="topbar"><div class="topbar-in">
+<a class="brand" href="../index.html">Baxter Way of <b>Selling</b></a>
+<nav class="crumbs" aria-label="Course"><span>Lesson 7</span><a href="../index.html">Course map</a><a href="../reference/field-card.html">Field card</a></nav>
+</div></div>
+<main class="wrap">
+<header class="col">
+  <p class="eyebrow">Lesson 7 · The clinical replay</p>
+  <h1>The FLOSEAL call</h1>
+  <p class="lede">Same five steps, real stakes. A spine surgeon, a hospital that already stocks FLOSEAL for cardiac, and a scrub team that got burned by the last rep. This call adds the tools from Lessons 3 to 6: a label, an accusation audit, stopping when she has bought, and pull through.</p>
+</header>
+
+<section class="col">
+<div class="compliance"><strong>Training draft.</strong> Dr. Reyes and Laurel Valley Medical Center are fictional. Product statements are taken from the FLOSEAL Instructions for Use and the FDA summary of safety and effectiveness. Route through AdProm before any field use, and always defer to the current IFU.</div>
+
+<h2>Warm-up: five from memory</h2>
+<p>Before you open the fact sheets, name the step for each line. These mix everything from the course.</p>
+</section>
+<div id="warm"></div>
+
+<section class="col">
+<h2>The call</h2>
+<p>Read both fact sheets. Every correct line uses something from them: the parallel fact, the formulary status, Kim, the prior rep, the swelling boundary.</p>
+</section>
+<div id="sheets"></div>
+<div id="game"></div>
+
+<script src="../assets/quiz.js"></script>
+<script src="../assets/game.js"></script>
+<script src="../assets/scenario-floseal.js"></script>
+<script>
+BWOS.stageQuiz(document.getElementById("warm"), "l7-warm", [
+ { ctx: "Customer: \"It's the docking that eats our time.\"", quote: "Docking?", a: "Discover", why: "A mirror." },
+ { ctx: "Rep to a vascular surgeon", quote: "How many of your fem-pop cases a month end with a suture-line check that takes longer than you'd like?", a: "Diagnose", why: "Frequency in the customer's units." },
+ { ctx: "Rep opening a call", quote: "A 2025 consensus statement recommends tracking cardiac bleeding beyond reexploration rate. How is your program approaching that?", a: "Connect", why: "A sourced, parallel fact and an open question about the program." },
+ { ctx: "Customer: \"Fine. Thursday.\"", quote: "Thursday it is. I'll train Kim's team Wednesday at 2 and be in the room.", a: "Advance", why: "She bought. Stop selling, lock the step." },
+ { ctx: "Rep to a surgeon", quote: "Based on what you told me, the wait is the problem. It conforms into the bed rather than sitting on top, and it's not for prophylactic use.", a: "Align", why: "Their words, one property, one boundary." }
+], "Warm-up");
+BWOS.playCall(document.getElementById("sheets"), document.getElementById("game"), BWOS.flosealScenario, {});
+BWOS.markDone("0007");
+</script>
+<div class="foot">
+<div class="box"><p class="eyebrow">Primary source</p><p>Read the full <a href="https://www.advancedsurgery.baxter.com/floseal" target="_blank" rel="noopener">FLOSEAL Hemostatic Matrix indications and important risk information</a> and the Instructions for Use before any field conversation. Every boundary in this call comes from it.</p></div>
+<div class="box"><p class="eyebrow">Questions</p><p>If anything here is unclear, ask your trainer on the next cohort call, or ask Claude to explain it another way or give you more practice lines.</p><p class="small">Keep the <a href="../reference/field-card.html">field card</a> handy for calls and ride-alongs.</p></div>
+</div>
+<nav class="pager" aria-label="Lessons"><a href="0006-align-and-advance.html">&larr; Align and Advance</a><a href="../reference/field-card.html">Field card &rarr;</a></nav>
+</main>
+</body>
+</html>

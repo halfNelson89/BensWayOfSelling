@@ -1,0 +1,68 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Baxter Way of Selling</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400&family=Gelasio:wght@400;500&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="assets/course.css">
+
+<div class="topbar"><div class="topbar-in">
+  <a class="brand" href="index.html">Baxter Way of <b>Selling</b></a>
+  <nav class="crumbs" aria-label="Course"><span>Advanced Surgery · Commercial Training</span><a href="reference/field-card.html">Field card</a></nav>
+</div></div>
+
+<main class="wrap">
+  <header class="col">
+    <p class="eyebrow">A seven-lesson course</p>
+    <h1>The Baxter Way of Selling</h1>
+    <p class="lede">Five steps for a customer call, taught in the order you'll use them. Learn the framework, play it with an everyday object, go deeper on each skill, then run the full call with FLOSEAL.</p>
+  </header>
+
+  <div class="rail" aria-label="The five steps">
+    <div><span class="n">01</span><div class="t">Connect</div><div class="j">Earn the conversation.</div></div>
+    <div><span class="n">02</span><div class="t">Discover</div><div class="j">Get them talking about their world.</div></div>
+    <div><span class="n">03</span><div class="t">Diagnose</div><div class="j">Turn the story into their number.</div></div>
+    <div class="is-align"><span class="n">04</span><div class="t">Align</div><div class="j">One product answers their pain.</div></div>
+    <div><span class="n">05</span><div class="t">Advance</div><div class="j">A dated, mutual next step.</div></div>
+  </div>
+
+  <p class="part">Part 1 · Learn the framework</p>
+  <div class="map">
+    <a class="card" href="lessons/0001-the-five-steps.html" data-l="0001"><span class="num">1</span><span><span class="ttl">Five steps, one job each</span><br><span class="dsc">What each step does, what it sounds like, and what changed in this version. Ends with a 14-card "name the step" quiz.</span></span><span class="kind">Lesson + quiz</span></a>
+  </div>
+
+  <p class="part">Part 2 · Play it</p>
+  <div class="map">
+    <a class="card" href="lessons/0002-the-call-game.html" data-l="0002"><span class="num">2</span><span><span class="ttl">The call game</span><br><span class="dsc">Draw a random object, read the customer and product fact sheets, then pick the line that moves the call at every step.</span></span><span class="kind play">Game</span></a>
+  </div>
+
+  <p class="part">Part 3 · Go deeper</p>
+  <div class="map">
+    <a class="card" href="lessons/0003-pre-call-planning.html" data-l="0003"><span class="num">3</span><span><span class="ttl">Pre-call planning wins the Connect</span><br><span class="dsc">The seven-line plan, the five tests for a parallel fact, and hypotheses instead of assumptions.</span></span><span class="kind">Lesson + practice</span></a>
+    <a class="card" href="lessons/0004-their-reality.html" data-l="0004"><span class="num">4</span><span><span class="ttl">Know their reality, ask better questions</span><br><span class="dsc">Who is measured on what, shaping instead of problem framing, and the mirror, label and accusation audit.</span></span><span class="kind">Lesson + practice</span></a>
+    <a class="card" href="lessons/0005-listen-diagnose-agree.html" data-l="0005"><span class="num">5</span><span><span class="ttl">Listen for it, size it, agree on it</span><br><span class="dsc">Six signals to hear, the four-question Diagnose ladder, and the "that's right" checkpoint against the status quo.</span></span><span class="kind">Lesson + practice</span></a>
+    <a class="card" href="lessons/0006-align-and-advance.html" data-l="0006"><span class="num">6</span><span><span class="ttl">Introduce the solution, then move the sale</span><br><span class="dsc">The Align formula, buying signals, advances versus continuations, and Follow Up, Pull Through, Continue.</span></span><span class="kind">Lesson + practice</span></a>
+  </div>
+
+  <p class="part">Part 4 · Replay it with FLOSEAL</p>
+  <div class="map">
+    <a class="card" href="lessons/0007-floseal-call.html" data-l="0007"><span class="num">7</span><span><span class="ttl">The FLOSEAL call</span><br><span class="dsc">A spine surgeon, a burned scrub team, and ten decisions from Connect to pull through.</span></span><span class="kind play">Game</span></a>
+  </div>
+
+  <div class="compliance" style="margin-top:36px"><strong>Training draft.</strong> Customers and hospitals in this course are fictional. FLOSEAL statements come from the Instructions for Use and the FDA summary of safety and effectiveness, and need AdProm review before field distribution.</div>
+</main>
+
+<script>
+(function () {
+  var done = null;
+  try { done = JSON.parse(localStorage.getItem("bwos:done")); } catch (e) {}
+  if (!done) return;
+  Array.prototype.forEach.call(document.querySelectorAll("[data-l]"), function (a) {
+    if (done[a.getAttribute("data-l")]) {
+      var k = a.querySelector(".kind");
+      if (k) k.innerHTML = '<span class="done-mark">&#10003; Opened</span> · ' + k.textContent;
+    }
+  });
+})();
+</script>
+
+</body></html>

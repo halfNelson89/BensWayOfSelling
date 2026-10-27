@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Call Game</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400&family=Gelasio:wght@400;500&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="../assets/course.css">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+</head>
+<body>
+<div class="topbar"><div class="topbar-in">
+<a class="brand" href="../index.html">Baxter Way of <b>Selling</b></a>
+<nav class="crumbs" aria-label="Course"><span>Lesson 2</span><a href="../index.html">Course map</a><a href="../reference/field-card.html">Field card</a></nav>
+</div></div>
+<main class="wrap">
+<header class="col">
+  <p class="eyebrow">Lesson 2 · Practice the framework</p>
+  <h1>The call game</h1>
+  <p class="lede">Draw a random object, read the two fact sheets, then run the whole call. At every step you pick the line that moves the customer forward. Pick wrong and you hear how a real customer would react.</p>
+</header>
+
+<section class="col">
+<h2>How to play</h2>
+<ol>
+  <li><strong>Draw an object.</strong> Each one comes with a customer and a situation. None of them are medical, so all of your attention goes to the method.</li>
+  <li><strong>Read both fact sheets first.</strong> The customer sheet is your pre-call plan. The product sheet tells you the one property that matters and the honest boundary. Every correct line uses something from them.</li>
+  <li><strong>Run the call.</strong> Connect, Discover, Diagnose, the "that's right" checkpoint, Align, Advance. Each wrong pick costs 15 trust. Keep picking until the call moves.</li>
+  <li><strong>Read the debrief.</strong> It replays your call step by step and lists where it stalled.</li>
+</ol>
+<p class="small">Run it in pairs during Phase 1: one rep reads the customer's reactions out loud, the other picks the line and explains why.</p>
+
+<div class="actions" style="align-items:center">
+  <button class="btn gold" id="draw" type="button">Draw a random object</button>
+  <span id="drawn" class="mono" aria-live="polite"></span>
+</div>
+</section>
+
+<div id="sheets"></div>
+<div id="game"></div>
+
+<script src="../assets/quiz.js"></script>
+<script src="../assets/game.js"></script>
+<script src="../assets/scenarios-objects.js"></script>
+<script>
+(function () {
+  var deck = BWOS.objectScenarios, last = null;
+  var drawBtn = document.getElementById("draw"), label = document.getElementById("drawn");
+  function draw() {
+    var pool = deck.filter(function (s) { return s !== last; });
+    var sc = pool[Math.floor(Math.random() * pool.length)];
+    last = sc;
+    label.textContent = "You drew: " + sc.object;
+    drawBtn.textContent = "Draw a different object";
+    BWOS.playCall(document.getElementById("sheets"), document.getElementById("game"), sc, {
+      extraAction: function () {
+        var b = document.createElement("button");
+        b.className = "btn gold"; b.type = "button"; b.textContent = "Draw another object";
+        b.onclick = function () { draw(); document.getElementById("sheets").scrollIntoView({ behavior: "smooth" }); };
+        return b;
+      }
+    });
+  }
+  drawBtn.onclick = draw;
+  draw();
+  BWOS.markDone("0002");
+})();
+</script>
+<div class="foot">
+<div class="box"><p class="eyebrow">Primary source</p><p>After two or three draws, read chapter 5 of <em>Never Split the Difference</em> by Chris Voss and Tahl Raz (Harper Business, 2016) on the two words "that's right." It explains why the checkpoint round matters so much.</p></div>
+<div class="box"><p class="eyebrow">Questions</p><p>If anything here is unclear, ask your trainer on the next cohort call, or ask Claude to explain it another way or give you more practice lines.</p><p class="small">Keep the <a href="../reference/field-card.html">field card</a> handy for calls and ride-alongs.</p></div>
+</div>
+<nav class="pager" aria-label="Lessons"><a href="0001-the-five-steps.html">&larr; The Five Steps</a><a href="0003-pre-call-planning.html">Pre-Call Planning &rarr;</a></nav>
+</main>
+</body>
+</html>
